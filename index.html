@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Zarmeen Binte Nasir</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #e9f5eb; 
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: #40916c;
+            font-family: fantasy;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 22px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #95d5b2;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #2d6a4f;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-family: cursive;
+            text-align: center;
+            color: #40916c;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Projects Container */
+        .projects-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .project {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            flex: 1; /* Equal width for all projects */
+        }
+
+        .project h3 {
+            color: #40916c;
+            margin-bottom: 10px;
+        }
+
+        .project img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* Event Management Image */
+        .event-image {
+            display: block;
+            margin: 0 auto; /* Center the image */
+            max-width: 90%; /* Increase the size */
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Skills Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        table th, table td {
+            padding: 15px;
+            text-align: center; /* Center-align content */
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background: #40916c;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        table td {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        table tr:hover {
+            background: #f1f1f1;
+            transition: background 0.3s ease;
+        }
+
+        /* Video Section */
+        .video-section {
+            text-align: center;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Contact Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input, textarea, button {
+            padding: 10px;
+            border: 1px solid #40916c;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        button {
+            background: #40916c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        button:hover {
+            background: #2d6a4f;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #40916c;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            color: #00381f;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Portfolio Title -->
+    <header>
+        <h1 style="font-family: 'Poppins', sans-serif;">Portfolio</h1>
+        <p>Zarmeen Binte Nasir - Web Developer | Software Engineer | UI/UX Designer</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">My Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#video">What I Offer</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a passionate web developer currently pursuing a Bachelor's in Software Engineering from Jinnah University for Women. I am also gaining hands-on experience as a Front-End Development Intern at SAMZ Technologies. I specialize in creating modern, responsive, and efficient web applications.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-container">
+                <div class="project">
+                    <h3>Foods And Roots</h3>
+                    <p>A foody website.</p>
+                    <img src="FAR1.png" alt="Foods And Roots" class="event-image">
+                    <img src="FAR2.png" alt="Foods And Roots" class="event-image">
+                    <img src="FAR3.png" alt="Foods And Roots" class="event-image">
+                </div>
+                <div class="project">
+                    <h3>Airline Reservation System</h3>
+                    <p>A system that streamlines flight bookings, cancellations, and passenger management with a secure database.</p>
+                    <img src="FB1.png" alt="Airline Reservation System" class="event-image">
+                    <img src="FB2.png" alt="Airline Reservation System" class="event-image">
+                    <img src="FB3.png" alt="Airline Reservation System" class="event-image">
+                </div>
+                <div class="project">
+                    <h3>Event Management System</h3>
+                    <p>A platform to simplify event planning, registration, and coordination.</p>
+                    <img src="EM1.png" alt="Event Management System" class="event-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Proficiency Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML/CSS</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>SQL</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>Git</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>UI/UX Design</td>
+                        <td>Intermediate</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Video Section -->
+        <section id="video" class="video-section">
+            <h2>What I Offer</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Zarmeen Binte Nasir. All rights reserved.</p>
+    </footer>
+</body>
+</html>
